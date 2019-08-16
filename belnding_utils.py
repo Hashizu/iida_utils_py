@@ -221,7 +221,6 @@ valid_data=lgb.Dataset(X_test, label=y_test)
 clf_z = lgb.train(lgb_params, train_set=train_data, valid_sets=valid_data, verbose_eval=4000, callbacks=callback_l)
 
 
-# 0.075あたり…？
 # plt.hist(clf_z.predict(test),bins=100);
 test_resi = clf_z.predict(test)
 resi_test_X = test[test_resi<0.07]
@@ -395,21 +394,6 @@ print(mape(data_y,opt_val))
 
 opt_preds2 = np.matmul(af_pred,beta_hat)
 
-"""first opt result
-
-9.21244101117562   -  (8.81232)
-
-9.039733690633417 - (8.78905)
-
-8.986280271929465 - (8.77372)
-
-8.9862799615317 - (8.77372) (opt only ones)
-
-8.932148026155744 - (8.76230)
-
-8.940686110259183 - (8.79659) (opt only ones)
-
-8.929625623665263 - (8.76501) (opt by abs)
 
 ## after Analysis
 """
@@ -432,5 +416,6 @@ data_plot = [go.Bar(
 #             x=list(genba.columns))]
 iplot(data_plot, filename='basic-bar')
 
-"""# submission"""
+
+
 
