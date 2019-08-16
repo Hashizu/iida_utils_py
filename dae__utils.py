@@ -118,16 +118,7 @@ def normalize_rank(df, all_nr= False):
   if all_nr:
     numerical = df.columns
   else:
-    numerical =['chiseki_js_hb', 'chiseki_kb_hb',
-           'tateuri_su', 'tochiuri_su', 'joken_su',
-           'hy2f_date_su', 'hy3f_date_su',
-           'kaoku_hb', 'yheki_kotei', 'gk_sho_kyori',
-           'gk_chu_kyori', 'minmenseki', 'rosenka_hb', 'koji_hb', 'kijun_hb',
-           'mseki_yt_hb', 'mseki_rd_hb', 'mseki_dp_hb', 'tc_mseki_min_hb',
-           'tc_mseki_max_hb', 'tt_mseki_min_hb', 'tt_mseki_max_hb',
-           'tc_mseki_avg_hb', 'tt_mseki_avg_hb', 'fi4m_kyori', 'fi3m_kyori',
-           'bus_hon', 'gk_yoc_tm', 'gk_sho_tm', 'gk_chu_tm', 'eki_kyori1',
-           'tc_mseki', 'tt_mseki', 'fukuin', 'magutchi', 'niwasaki', 'garage']
+    numerical =['...']
   
   for x in numerical:
     series = df[x].rank()
@@ -140,7 +131,7 @@ def normalize_rank(df, all_nr= False):
     
   return df
 
-## Preprocess2
+## Preprocess
 
 data = pd.DataFrame(np.zeros((1000,200)))
 
